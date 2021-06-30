@@ -16,6 +16,6 @@ build:
     # Upload to PyPi
     - >-
       TWINE_PASSWORD=${PYPI_TOKEN}
-      TWINE_USERNAME=aw1cks
+      TWINE_USERNAME=__token__
       python -m twine upload
       dist/*
