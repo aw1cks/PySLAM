@@ -7,7 +7,7 @@ from dynmen import Menu as dynmenu
 from multiprocessing import Pool
 from os import cpu_count
 from pydub import AudioSegment
-from xdg import xdg_config_home
+from xdg import BaseDirectory
 
 
 class PySLAM():
@@ -16,7 +16,7 @@ class PySLAM():
             "name": "--config",
             "short_name": "-c",
             "help": "Optional path to config file. defaults to ~/.config/slam/config.yaml",
-            "default": xdg_config_home().joinpath("slam/config.yaml"),
+            "default": pathlib.Path(BaseDirectory.xdg_config_home).joinpath("slam/config.yaml"),
             "action": "store",
             "required": False,
         },

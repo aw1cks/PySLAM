@@ -11,7 +11,7 @@ setup(
     platforms = [
         "linux",
     ],
-    version = "1.1.0",
+    version = "1.1.1",
     license = "AGPLv3",
     description = "Python implementation of Source Live Audio Mixer",
     long_description = long_description,
@@ -35,8 +35,8 @@ setup(
     install_requires = [
         "dynmen",
         "pydub",
+        "pyxdg",
         "pyyaml",
-        "xdg",
     ],
     python_requires = ">=3.6",
     package_dir={

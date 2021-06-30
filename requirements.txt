@@ -1,6 +1,6 @@
 dynmen>=0.1.5
 pydub>=0.24.0
+pyxdg>=0.27
 pyyaml>=5.3
 traitlets>=5.0.0
-xdg>=5.0.0
 youtube_dl>=2020.12.31

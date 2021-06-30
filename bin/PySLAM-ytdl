@@ -1,4 +1,7 @@
 #!/bin/sh
+
+set -e
+
 SLAM_DIR="$(PySLAM -D)"
 
 printf 'Enter the youtube URL: '
