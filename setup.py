@@ -11,7 +11,7 @@ setup(
     platforms = [
         "linux",
     ],
-    version = "1.1.1",
+    version = "1.2.0",
     license = "AGPLv3",
     description = "Python implementation of Source Live Audio Mixer",
     long_description = long_description,
@@ -21,8 +21,8 @@ setup(
     url = "https://gitlab.com/aw1cks/PySLAM",
     download_url = "https://gitlab.com/aw1cks/PySLAM",
     scripts = [
-        "bin/PySLAM",
-        "bin/PySLAM-ytdl",
+        "bin/pyslam",
+        "bin/pyslam-ytdl",
     ],
     keywords = [
         "csgo",
@@ -37,6 +37,7 @@ setup(
         "pydub",
         "pyxdg",
         "pyyaml",
+        "traitlets",
     ],
     python_requires = ">=3.6",
     package_dir={
