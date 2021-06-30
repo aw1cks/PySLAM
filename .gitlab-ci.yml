@@ -3,6 +3,8 @@
 image: python:latest
 
 build:
+  only:
+    - tags
   script:
     - pip install build setuptools twine
     - python -m build
