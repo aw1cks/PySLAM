@@ -17,8 +17,17 @@ class PySLAM():
             "short_name": "-c",
             "help": "Optional path to config file. defaults to ~/.config/slam/config.yaml",
             "default": xdg_config_home().joinpath("slam/config.yaml"),
+            "action": "store",
             "required": False,
         },
+        {
+            "name": "--printdir",
+            "short_name": "-D",
+            "help": "Print path in which songs are configured to be stored and exit",
+            "default": False,
+            "action": "store_true",
+            "required": False,
+        }
     ]
     exec_config = """
     // ** ++++++ **
@@ -72,6 +81,7 @@ class PySLAM():
             parser.add_argument(
                 arg["short_name"],
                 arg["name"],
+                action=arg["action"],
                 help=arg["help"],
                 default=arg["default"],
                 required=arg["required"],
@@ -101,6 +111,10 @@ class PySLAM():
         except:
             print("Error processing config file. Exiting...")
             exit(2)
+
+        if args.printdir is True:
+            print(config["music"]["paths"][0])
+            exit(0)
 
         # Find files that need converting
         unconverted_files = []

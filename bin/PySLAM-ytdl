@@ -1,0 +1,10 @@
+#!/bin/sh
+SLAM_DIR="$(PySLAM -D)"
+
+printf 'Enter the youtube URL: '
+read -r url
+printf 'Enter the output name (will append .mp3): '
+read -r name
+
+cd "${SLAM_DIR}"
+youtube-dl -x --audio-format mp3 "${url}" --output "${name}.%(ext)s"
