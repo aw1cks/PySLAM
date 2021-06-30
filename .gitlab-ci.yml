@@ -17,6 +17,7 @@ build:
     - >-
       TWINE_PASSWORD=${PYPI_TOKEN}
       TWINE_USERNAME=__token__
+      python -m twine upload
       --repository-url https://upload.pypi.org/legacy/
       python -m twine upload
       dist/*
