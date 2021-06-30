@@ -1,0 +1,21 @@
+---
+
+image: python:latest
+
+build:
+  script:
+    - pip install build setuptools twine
+    - python -m build
+    # Upload to GitLab package registry
+    - >-
+      TWINE_PASSWORD=${CI_JOB_TOKEN}
+      TWINE_USERNAME=gitlab-ci-token
+      python -m twine upload
+      --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
+      dist/*
+    # Upload to PyPi
+    - >-
+      TWINE_PASSWORD=${PYPI_TOKEN}
+      TWINE_USERNAME=aw1cks
+      python -m twine upload
+      dist/*

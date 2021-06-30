@@ -1,0 +1,5 @@
+converted/
+dist/
+PySLAM.egg-info/
+venv/
+**/__pycache__

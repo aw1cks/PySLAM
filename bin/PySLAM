@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+from pyslam import slam
+
+if __name__ == "__main__":
+    slam.PySLAM().main()
