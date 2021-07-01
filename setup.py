@@ -11,7 +11,7 @@ setup(
     platforms = [
         "linux",
     ],
-    version = "1.2.0",
+    version = "1.2.1",
     license = "AGPLv3",
     description = "Python implementation of Source Live Audio Mixer",
     long_description = long_description,

@@ -178,7 +178,7 @@ class PySLAM():
             sys.exit(3)
 
         if args.printdir is True:
-            print(config["music"]["path"])
+            print(music_dir)
             sys.exit(0)
 
         # Find files that need converting
@@ -193,9 +193,8 @@ class PySLAM():
 
         # Construct list of all converted songs
         songs = {}
-        for d in music_dir:
-            for f in pathlib.Path(d).joinpath("converted").glob("*.wav"):
-                songs[str(f.resolve().stem)] = f.resolve()
+        for f in pathlib.Path(music_dir).joinpath("converted").glob("*.wav"):
+            songs[str(f.resolve().stem)] = f.resolve()
         # Exit if no songs found
         if len(songs) == 0:
             print("No songs found. Import some songs with pyslam-ytdl")
