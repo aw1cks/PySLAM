@@ -62,5 +62,5 @@ The following parameters are present:
 
 | Argument     | Short argument | Explanation                         | Default | Example                      |
 |--------------|----------------|-------------------------------------|---------|------------------------------|
-| `--config`   | `-c`           | Override config path                | `None`  | `PySLAM -c /etc/pyslam.yaml` |
-| `--printdir` | `-D`           | Print music directory as configured | `False` | `PySLAM -D`                  |
+| `--config`   | `-c`           | Override config path                | `None`  | `pyslam -c /etc/pyslam.yaml` |
+| `--printdir` | `-D`           | Print music directory as configured | `False` | `pyslam -D`                  |
